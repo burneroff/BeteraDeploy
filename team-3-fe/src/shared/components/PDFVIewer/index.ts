@@ -1,0 +1,1 @@
+export { PDFViewer } from '@/shared/components/PDFVIewer/ui/PDFViewer.tsx';

@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  api:
+    build: .
+    container_name: betera-api
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=postgres://it-camp-2025-team-3:PmHAu7m6ePrqosUV@postgresql.ihub-2pmgames.by:5432/it_camp_2025_team_3_db?sslmode=disable
+      - S3_ENDPOINT=https://s3.eu-central-1.amazonaws.com
+      - S3_ACCESS_KEY=AKIAVPBAXI6YFIH5SMFN
+      - S3_SECRET_KEY=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
+      - S3_BUCKET=it-camp-2025-team-3
+      - S3_REGION=eu-central-1
+      - S3_SSL=true
+      - JWT_SECRET=super-secret-jwt-key-here
+    restart: unless-stopped
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: betera-mailhog
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    restart: unless-stopped

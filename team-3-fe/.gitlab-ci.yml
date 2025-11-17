@@ -1,0 +1,28 @@
+stages:
+  - build-and-push
+
+variables:
+  IMAGE_NAME: "$CI_REGISTRY_IMAGE/fe-3"
+  IMAGE_TAG: "$CI_COMMIT_SHORT_SHA"
+  DOCKER_TLS_CERTDIR: ""
+
+build-and-push-image:
+  stage: build-and-push
+  image: docker:latest
+  services:
+    - name: docker:latest
+  tags:
+    - shared
+    - docker
+  script:
+    - echo "Start building Docker image..."
+    - docker info
+    - docker build -t $IMAGE_NAME:$IMAGE_TAG -t $IMAGE_NAME:latest .
+    - echo "Logging in to GitLab registry..."
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+    - echo "Pushing images..."
+    - docker push $IMAGE_NAME:$IMAGE_TAG
+    - docker push $IMAGE_NAME:latest
+  only:
+    - merge_requests
+    - develop

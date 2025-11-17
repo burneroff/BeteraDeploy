@@ -1,0 +1,104 @@
+:root {
+  --primary-100: #5e5fdb;
+  --primary-200: #4c4dd6;
+  --primary-300: #4243cc;
+  --primary-400: #3f41d6;
+
+  --secondary-100: #e8e8ff;
+  --secondary-200: #dadafb;
+  --secondary-300: #d1d1f4;
+  --secondary-400: #ceceff;
+
+  --tertiary-default: #fafbff;
+  --tertiary-hover: #fafbff;
+  --tertiary-focused: #f2f2ff;
+  --tertiary-active: #e8e8ff;
+  --tertiary-disabled: #fafbff;
+
+  --bg-surface: #ffffff;
+  --bg-surface-1: #fafbff;
+  --bg-surface-2: #f3f5ff;
+  --bg-surface-3: #eaecfe;
+  --bg-dark: #221e1c;
+  --bg-disabled-light: #ffffff30;
+  --bg-disabled-dark: #221e1c30;
+
+  --divider-default: #cfd5ec;
+
+  --text-accent: #3f41d6;
+  --text-disabled-accent: #3f41d660;
+  --text-soft: #413b65;
+  --text-dark: #16122c;
+  --text-disabled-light: #fafbff40;
+  --text-disabled-dark: #16122c40;
+  --text-soft: #413b65;
+  --text-light: #fafbff;
+
+  --status-success: #26ae60;
+  --status-error: #ff5d52;
+  --status-error-dark: #cf2e20;
+  --status-attention: #ff8f57;
+  --status-info: #39acff;
+
+  --icon-soft: #413b65;
+  --icon-default: #717171;
+  --icon-disabled: #16122c40;
+  --icon-static-dark: #221e1c;
+  --icon-static-light: #fafbff;
+  --icon-disabled-light: #fafbff40;
+
+  --accent-default: var(--primary-100);
+  --accent-hover: var(--primary-200);
+  --accent-focused: var(--primary-300);
+  --accent-active: var(--primary-400);
+  --accent-disabled: #8f90fb;
+
+  --secondary-default: var(--secondary-100);
+  --secondary-hover: var(--secondary-200);
+  --secondary-focused: var(--secondary-300);
+  --secondary-active: var(--secondary-400);
+  --secondary-disabled: #e8e8ff;
+
+  --heading-1-size: 32px;
+  --heading-1-line-height: 40px;
+  --heading-1-font-weight: 600;
+
+  --heading-2-size: 24px;
+  --heading-2-line-height: 30px;
+  --heading-2-font-weight: 500;
+
+  --heading-3-size: 18px;
+  --heading-3-line-height: 22px;
+  --heading-3-font-weight: 500;
+
+  --subheading-s-size: 14px;
+  --subheading-s-line-height: 18px;
+  --subheading-s-font-weight: 500;
+
+  --body-m-size: 16px;
+  --body-m-line-height: 22px;
+  --body-m-font-weight: 400;
+
+  --body-s-size: 14px;
+  --body-s-line-height: 20px;
+  --body-s-font-weight: 400;
+
+  --body-xs-size: 12px;
+  --body-xs-line-height: 16px;
+  --body-xs-font-weight: 400;
+
+  --body-2xs-size: 10px;
+  --body-2xs-line-height: 14px;
+  --body-2xs-font-weight: 400;
+
+  --heading-font-family: 'Heading Now', sans-serif;
+
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1440px;
+  --breakpoint-xxxl: 1600px;
+  --breakpoint-4k: 1920px;
+}

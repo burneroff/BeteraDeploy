@@ -1,0 +1,9 @@
+CREATE TABLE documents (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
+    pdf_path TEXT NOT NULL,
+    role_id INTEGER REFERENCES roles(id) ON DELETE SET NULL,
+    category_id INTEGER 
+);

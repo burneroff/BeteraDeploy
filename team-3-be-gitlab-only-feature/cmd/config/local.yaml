@@ -1,0 +1,31 @@
+env: "local"
+http_server:
+  address: "localhost:8080"
+  server_port: 8080
+  timeout: 10s
+  idle_timeout: 60s
+database:
+  postgresql:
+    host: "localhost"
+    data_port: 5432
+    user: "postgres"
+    password: "17080290"
+    database: "postgres"
+    drivername: "postgresql"
+    ssl_mode: "disable"
+auth:
+  jwt_secret: "super-secret-jwt-key-here"
+email:
+  smtp_host: "smtp.gmail.com"      # MailHog SMTP сервер
+  smtp_port: 587              # MailHog SMTP порт
+  smtp_username: "nikitakaraban3@gmail.com"           # Пусто для MailHog
+  smtp_password: "ttnh uckd xwhx iczd"           # Пусто для MailHog
+  from_email: "nikitakaraban3@gmail.com"  
+  from_name: "IT Camp 2025 Team 3"
+S3:
+  bucket: "betera"
+  region: "auto"
+  endpoint: "https://f0c0b49b44c42980efe76ffb715ae993.r2.cloudflarestorage.com"
+  access_key: "02f42619505f21f74a6cd5e6eb38fbfb"
+  secret_key: "8595bab6d410b07d33fb36dc72b97d73b6eec31d3bb171098d7a423a9ca9dfab"
+  use_ssl: true

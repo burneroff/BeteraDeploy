@@ -1,0 +1,1 @@
+export { Title } from '@/shared/components/Title/ui/Title.tsx';
