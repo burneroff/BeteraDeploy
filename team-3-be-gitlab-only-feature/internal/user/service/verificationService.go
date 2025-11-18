@@ -60,7 +60,7 @@ func (vs *VerificationService) GetBaseURL() string {
 // SendVerificationEmail отправляет email с ссылкой для подтверждения
 func (vs *VerificationService) SendVerificationEmail(userID int, email, token string) error {
 	// baseURL := vs.GetBaseURL()
-	verificationURL := fmt.Sprintf("http://45.130.9.212:5173/confirm-password?user_id=%d&token=%s", userID, token)
+	verificationURL := fmt.Sprintf("http://45.130.9.212/confirm-password?user_id=%d&token=%s", userID, token)
 
 	return vs.emailService.SendVerificationEmail(email, verificationURL)
 }
