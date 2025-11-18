@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Typography, Box, IconButton, Tooltip } from '@mui/material';
-import { Document, Page } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf';
 import { MinusIcon } from '@/shared/icons/MinusIcon.tsx';
 import { PlusIcon } from '@/shared/icons/PlusIcon.tsx';
 import { ArrowLeftIcon } from '@/shared/icons/ArrowLeftIcon.tsx';
@@ -9,6 +9,8 @@ import { useDocumentsGridStore } from '@/entities/DataGridDocuments';
 import { type Dispatch, type SetStateAction } from 'react';
 import CloseIcon from '@/shared/icons/CloseIcon.tsx';
 import BackMenuIcon from '@/shared/icons/BackMenuIcon.tsx';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 interface PDFViewerProps {
   setShowRight: Dispatch<SetStateAction<boolean>>;
