@@ -5,14 +5,14 @@ import { authStorage } from '../auth/authStorage';
 // Базовый клиент для всех НЕ-auth запросов
 // ───────────────────────────────────────────────────────────────────────────────
 export const http = axios.create({
-  baseURL: 'http://45.130.9.212:8080',
+  baseURL: '/api',
   withCredentials: true,
   timeout: 10000,
 });
 
 // Отдельный клиент ТОЛЬКО для refresh (без интерсепторов, без Authorization)
 const refreshHttp = axios.create({
-  baseURL: 'http://45.130.9.212:8080',
+  baseURL: '/api',
   withCredentials: true,
   timeout: 10000,
 });
